@@ -373,6 +373,19 @@ export const asyncRoutes = [
   },
 
   {
+    path: '/event-report',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/event-report/index'),
+        name: 'EventReport',
+        meta: { title: '重点事件通报', icon: 'el-icon-message' }
+      }
+    ]
+  },
+
+  {
     path: 'external-link',
     component: Layout,
     children: [
